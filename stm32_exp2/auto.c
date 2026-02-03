@@ -56,7 +56,7 @@ void init_GPIO(unsigned short port,unsigned short pin,unsigned short direc,unsig
 				IDR=(volatile unsigned long *) (&GPIO_C + offset);
 	  }
 		
-		state= ((*IDR & (1<<pin)>>pin)); // remove everything else to only get pin direction
+		state= ((*IDR & (1<<pin))>>pin); // remove everything else to only get pin direction
 		return state;
 	}
 	
@@ -77,7 +77,7 @@ void init_GPIO(unsigned short port,unsigned short pin,unsigned short direc,unsig
 		{
 				ODR=(volatile unsigned long *) (&GPIO_C + offset);
 		}
-		if(state == HIGH)
+		if(state)
 		{
 				*ODR |= (state<<pin); //1 left shift pin number //making pin high
 			
@@ -101,4 +101,4 @@ void init_GPIO(unsigned short port,unsigned short pin,unsigned short direc,unsig
 			
 	}
 	
-		
+	

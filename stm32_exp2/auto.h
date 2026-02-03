@@ -39,3 +39,4 @@ void init_GPIO(unsigned short port,unsigned short pin,unsigned short direc,unsig
 int read_GPIO(unsigned short port,unsigned short pin);
 void write_GPIO(unsigned short port,unsigned short pin, unsigned short state);
 void toggle_GPIO(unsigned short port,unsigned short pin);
+
