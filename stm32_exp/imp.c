@@ -105,7 +105,7 @@ void LCD_SetAddr(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1) {
     LCD_Data(x1 >> 8);  
     LCD_Data(x1 & 0xFF);
 
-    LCD_Command(0x2B);  // Row address set
+    L CD_Command(0x2B);  // Row address set
     LCD_Data(y0 >> 8);
     LCD_Data(y0 & 0xFF);
     LCD_Data(y1 >> 8);
