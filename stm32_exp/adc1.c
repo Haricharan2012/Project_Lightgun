@@ -145,3 +145,4 @@ int adc_rx(char adc, short port, short pin)          // Read the converted ADC v
 
     return result;                                  // Return the scaled ADC value.
 }
+
